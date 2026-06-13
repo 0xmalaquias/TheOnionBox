@@ -1,4 +1,4 @@
-# < --- [ TheOnionBox ] --- >#
+# < --- [ TheOnionBox ] --- >
 # [DESCRIPTION] #
 [!] Shell based script of Tor+Firewall+No IPv6 for linux distros, (uses Tor and iptables based firewall rules, examples below).
 
