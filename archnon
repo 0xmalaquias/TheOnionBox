@@ -210,10 +210,8 @@ fi
    sysctl --system >/dev/null 2>&1
 
    pkill -9 tor >/dev/null 2>&1
-   pkill -f tor >/dev/null 2>&1
 
    pkill -9 NetworkManager >/dev/null 2>&1
-   pkill -f NetworkManager >/dev/null 2>&1
 
    chattr -i /etc/resolv.conf >/dev/null 2>&1
 
@@ -391,8 +389,6 @@ if ss -tulpn | grep -iE "6969|9150|9151" >/dev/null 2>&1 || pgrep tor >/dev/null
   
    pkill -9 tor >/dev/null 2>&1
    pkill -9 NetworkManager >/dev/null 2>&1
-   pkill -f NetworkManager >/dev/null 2>&1
-   pkill -f tor >/dev/null 2>&1
 
    chattr -i /etc/resolv.conf >/dev/null 2>&1
 
@@ -738,8 +734,6 @@ echo -e "\n${BLUE}[${YELLOW}warn${BLUE}]${P} Requested action: ${YELLOW}'Restart
 
 pkill -9 tor >/dev/null 2>&1
 pkill -9 NetworkManager >/dev/null 2>&1
-pkill -f tor >/dev/null 2>&1
-pkill -f NetworkManager >/dev/null 2>&1
 
 config
 
