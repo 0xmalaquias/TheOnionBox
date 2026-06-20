@@ -3,7 +3,7 @@
 
 [warn] ArchNoN is a personal project developed by 0xmalaquias@github.com, if you will use it you have to know that developer wont answer in case of any issue occurs in your machine(perhaps, issues are not common, in fact, they are incredible weird)
 
-[*] If you'll use it on a fakeroot/chroot env like proot/nethunter, on termux, you have to know that script will block you entirelly to use curl normally, (because it wont be able to apply fireall, only if you are rooted), to resolv any link you must use tool’s "link" param, or give to curl the param: --socks5-hostname 127.0.0.1:9150.
+[*] If you'll use it on a fakeroot/chroot env like proot/nethunter, on termux, you have to know that script will block you entirelly to use curl normally, (because it wont be able to apply firewall, only if you are rooted), to resolv any link you must use tool’s "link" param, or give to curl the param: --socks5-hostname 127.0.0.1:9150.
 
 # [ Requeriments ] # 
 [*] Required PKGs: 
