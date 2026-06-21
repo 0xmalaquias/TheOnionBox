@@ -159,7 +159,7 @@ fi
 help(){
    echo -e "\n${BLUE}<--- [${GREEN} ArchNoN Anonimation Tool ${BLUE}] --->${NC}"
    echo -e "\n${RED}[${YELLOW}warn${RED}]${GREEN} You are using the nftables version.${NC}"
-   echo -e "\n${BLUE}[${GREEN}warn${BLUE}]${GREEN} Supported managers: Open-RC, Systemd, Runit only !!${NC}"
+   echo -e "\n${BLUE}[${YELLOW}warn${BLUE}]${GREEN} Supported managers: Open-RC, Systemd, Runit only !!${NC}"
    echo -e "\n${BLUE}[${YELLOW}warn${BLUE}]${GREEN} ArchNoN is a ${YELLOW}personal project ${GREEN}developed by ${BLUE}0xmalaquias@github.com${GREEN}, if you will use it you have to know that developer wont answer in case of any issue occurs in your machine(${RED}perhaps, issues are not common, in fact, they are incredible weird${GREEN}), anyways, here are the ${BLUE}script actions: ${NC}"
    echo -e "\n${P}[${NC}0${P}]${NC} ${BLUE}start ${RED}<-----> ${GREEN}Start ArchNoN and ${YELLOW}Applies Firewall rules${NC}"
    echo -e "\n${P}[${NC}1${P}]${NC} ${BLUE}stop: ${RED}<-----> ${GREEN}Stop ArchNoN and ${RED}Flushes Firewall rules${NC}"
@@ -508,9 +508,9 @@ echo -e "\n${BLUE}[${YELLOW}warn${BLUE}]${P} Requested action: ${YELLOW}'boot-en
 if [ -f /etc/systemd/system/archnon.service ] && command -v systemctl >/dev/null 2>&1; then
 
     if systemctl is-enabled archnon >/dev/null 2>&1; then
-       echo -e "\n${P}[${YELLOW}warn${P}]${GREEN} ArchNoN is already enable${NC}"
+       echo -e "\n${P}[${YELLOW}warn${P}]${GREEN} ArchNoN is already enabled${NC}"
     else
-        systemctl enable archnon >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been enabled${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not enable ArchNoN, check your permissions over the system${NC}"
+        systemctl enable archnon >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been enable${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not enable ArchNoN, check your permissions over the system${NC}"
     fi
 fi
 
@@ -527,16 +527,16 @@ if [ -f /etc/sv/archnon/run ] && command -v runit >/dev/null 2>&1; then
       if ls -l $RSDIR/archnon/ >/dev/null 2>&1; then
             echo -e "\n${P}[${YELLOW}warn${P}]${GREEN} ArchNoN is already enabled${NC}"
       else
-           ln -s /etc/sv/archnon $RSDIR >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been enabled${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not enable ArchNoN, check your permissions over the system${NC}"
+           ln -s /etc/sv/archnon $RSDIR >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been enable${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not enable ArchNoN, check your permissions over the system${NC}"
       fi
 fi
 
 if [ -f /etc/init.d/archnon ] && command -v rc-update >/dev/null 2>&1; then
 
       if sudo rc-update | grep -iE "archnon" >/dev/null 2>&1; then
-           echo -e "\n${P}[${YELLOW}warn${P}]${GREEN} ArchNoN is already enable${NC}"
+           echo -e "\n${P}[${YELLOW}warn${P}]${GREEN} ArchNoN is already enabled${NC}"
       else
-           sudo rc-update add archnon default >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been enabled${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not enable ArchNoN, check your permissions over the system${NC}"
+           sudo rc-update add archnon default >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been enable${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not enable ArchNoN, check your permissions over the system${NC}"
       fi
 fi
 
@@ -562,7 +562,7 @@ if [ -f /etc/systemd/system/archnon.service ] && command -v systemctl >/dev/null
         exit 0
     else
 
-    systemctl disable archnon >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been disabled${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not disable ArchNoN, check your permissions over the system${NC}"
+    systemctl disable archnon >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been disable${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not disable ArchNoN, check your permissions over the system${NC}"
     exit 1
     fi
 fi
@@ -584,7 +584,7 @@ if [ -f /etc/sv/archnon/run ] && command -v runit  >/dev/null 2>&1; then
            exit 0
       else
 
-      rm -rf $RSDIR/archnon >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been disabled${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not disable ArchNoN, check your permissions over the system${NC}"
+      rm -rf $RSDIR/archnon >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been disable${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not disable ArchNoN, check your permissions over the system${NC}"
       exit 1
       fi
 fi
@@ -596,7 +596,7 @@ if [ -f /etc/init.d/archnon ] && command -v rc-service  >/dev/null 2>&1; then
            exit 0
       else
 
-      rc-update del archnon default >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been disabled${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not disable ArchNoN, check your permissions over the system${NC}"
+      rc-update del archnon default >/dev/null 2>&1 && echo -e "\n${BLUE}[${GREEN}notice${BLUE}]${GREEN} ArchNoN has been disable${NC}" || echo -e "\n${RED}[${GREEN}err${RED}]${GREEN} Could not disable ArchNoN, check your permissions over the system${NC}"
       exit 1
       fi
 fi
