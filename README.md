@@ -17,7 +17,7 @@
 
 - try-dot-onion >> Try to curl .onion addresses(this script comes with some of them, for example: duckduckgo, hiddenwiki, etc) by running ./try-dot-onion, uses default's socks5 proxy address(127.0.0.1:9150), it might fail if you use a different address/tor is not running.
 
-- make_it_work >> ./make_it_work, scripot you run to move archnon to your $PATH(/usr/bin dir), (run as root always).
+- make_it_work >> ./make_it_work, script you run to move archnon to your $PATH(/usr/bin dir), (run as root always).
 
 
 # [ Script Params/Actions ] #
