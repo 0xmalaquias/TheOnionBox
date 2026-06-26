@@ -155,7 +155,7 @@ if ! [ -f /etc/archnon_rules.nft ]; then
 fi
 
 if [ -f /etc/archnon_rules.nft ]; then
-    echo -e "\n${BLUE}[${NC}*${BLUE}]${LB} Showing ${GREEN}'/etc/archnon_rules'${NC}, ${ORANGE}(${BLUE}skel file${ORANGE})${NC}"
+    echo -e "\n${BLUE}[${NC}*${BLUE}]${LB} Showing ${GREEN}'/etc/archnon_rules.nft'${NC}, ${ORANGE}(${BLUE}skel file${ORANGE})${NC}"
     sleep 4
     cat /etc/archnon_rules.nft
     echo -e "\n${BLUE}[${NC}+${BLUE}]${GREEN} Keep Looking, take your time..${NC}"
