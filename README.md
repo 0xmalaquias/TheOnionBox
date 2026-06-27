@@ -8,7 +8,7 @@
 
 # [ Requeriments ] # 
 - [warn] Required PKGs: (bash, if not installed), all other pkgs can be managed by tool, actually.
-- [warn] Extra: Full root access(to apply firewall rules and full anonimation of DNS queries with no issues)
+- [warn] Extra: Full root access(to apply firewall rules and DNS anonymation hacks with no issues)
 
 # [ Dir Content ] #
 
@@ -20,7 +20,7 @@
 
 - example_bridges.txt: An example file that contains some Tor bridges from: https://bridges.torproject.org/options/en, .onion: kgclfuro65jjlivyzfmxiq2kyv5lickrl4qd.onion/options/en.
 
-# [ Script Params/Actions ] #
+# [ ArchNoN actions ] #
 
 - [warn] usage: archnon [ACTION]
 
