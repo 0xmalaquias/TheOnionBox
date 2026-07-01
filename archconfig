@@ -20,7 +20,8 @@ NC="\e[0m"
 
 # Banner
 
-echo -e "\n${P}<=[${LB} ArchConfig ${YELLOW}v1.0.0 ${NC}By: ${ORANGE}newmasterone27@gmail.com${P} ]=>${NC}"
+echo -e "\n${P}<=[${LB} ArchConfig ${YELLOW}v1.0.0 ${P}]=>"
+echo -e "${BLUE}${YELLOW}*${BLUE}] ${YELLOW}Developed By: ${ORANGE}newmasterone27@gmail.com${NC}"
 
 # Tor Ports
 
